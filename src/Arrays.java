@@ -71,6 +71,20 @@ public class Arrays {
 		// Exercicio 8
 		System.out.println(uniao(a, b));
 		
+		//Exercicio 9
+		System.out.println("Imprime A");
+		for(int i = 0; i < a.size(); i++){
+			
+			System.out.print(a.get(i) + ", ");			
+		}
+		
+		trocaPosicao(a);
+		
+		System.out.println("Imprime Trocado\n");
+		for(int i = 0; i < a.size(); i++){
+			
+			System.out.print(a.get(i) + ", ");	
+		}	
 		
 	}
 	
@@ -125,6 +139,39 @@ public class Arrays {
 		
 		return listaUniao;
 
+	}
+	
+	public static ArrayList<Integer> trocaPosicao(ArrayList<Integer> a){
+		
+		ArrayList<Integer> listraTrocaPosicao = new ArrayList<Integer>();
+		listraTrocaPosicao.add(a.get(0));
+		listraTrocaPosicao.add(a.get(a.size() -1));
+		
+		int menor = 0;
+		int maior = 0;
+		int i;
+		int j;
+			
+		
+		for(i = 0; i < a.size(); i++){
+			for (j = 0; j < a.size(); j++) {
+				
+				//Encontra o menos
+				if(listraTrocaPosicao.get(0) < a.get(j) ){
+					
+					menor = j;					
+				}
+				//Encontra o maior
+				if(listraTrocaPosicao.get(1) > a.get(j) ){
+					
+					maior = j;										
+				}				
+			}			
+		}
+		a.add(menor, a.get(maior));
+		a.add(maior, a.get(menor));
+		
+		return a;		
 	}
 
 
