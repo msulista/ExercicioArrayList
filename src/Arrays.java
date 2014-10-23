@@ -66,12 +66,15 @@ public class Arrays {
 		
 		
 		// Exercicio 7
+		System.out.println("Exercicio 7");
 		System.out.println(intersecciona(a, b));
 		
 		// Exercicio 8
+		System.out.println("Exercicio 8");
 		System.out.println(uniao(a, b));
 		
 		//Exercicio 9
+		System.out.println("Exercicio 9");
 		System.out.println("Imprime A");
 		for(int i = 0; i < a.size(); i++){
 			
@@ -79,7 +82,7 @@ public class Arrays {
 		}
 		
 		trocaPosicao(a);
-		
+
 		System.out.println("Imprime Trocado\n");
 		for(int i = 0; i < a.size(); i++){
 			
